@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    text-decoration: none;
     scroll-behavior: smooth;
 }
 .NotioSignUp{
@@ -13,7 +12,6 @@ display: flex;
 flex-direction: row;
 overflow: auto;
 }
-
 /*==== frame1 === */
 .frame1{
     padding-left: 42px;
@@ -21,11 +19,11 @@ overflow: auto;
     height: 100%;
 }
 .logoContainer{
+    cursor: pointer;
     padding-top: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 .notioTxt{
 padding-left: 0.5vmax !important;
@@ -51,19 +49,19 @@ background-clip: text;
     gap: 37px;
 }
 .login{
-background: linear-gradient(180deg, #00BEFA 0%, #0160EA 100%);
-border-radius: 73.0286px;
-width: 13vmax;
-height: 5vmax;
-display: flex;
-align-items: center;
-justify-content: center;
-font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-font-style: normal;
-font-weight: 500;
-font-size: 1.8vmax;
-color: #FFFFFF;
-cursor: pointer;
+   background: linear-gradient(180deg, #00BEFA 0%, #0160EA 100%);
+   border-radius: 73.0286px;
+   width: 13vmax;
+   height: 5vmax;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 1.8vmax;
+   color: #FFFFFF;
+   cursor: pointer;
 }
 .signUp{
     color: #FFFFFF;
@@ -96,13 +94,14 @@ cursor: pointer;
     align-items: center;
 }
 .email-passwordInput>input{
+   outline: none;
    width: 100%;
    background: #FFFFFF;
    border: 2.43429px solid #A4A4A4;
    border-radius: 70.3238px;
    height: 4vmax;
-   font-size: 18px;
-   padding: 0 50px;
+   font-size: 1.5vmax;
+   padding: 0 2.5vmax;
    padding-left: 5vmax;
    font-weight: 400;
 }
@@ -111,7 +110,10 @@ cursor: pointer;
     transform: translateX(1.6vmax);
     font-size: 1vmax;
     color: grey;
-
+}
+.email-passwordInput>span>img{
+    width: 2.4vmax;
+    height: 2.4vmax;
 }
 .inputContainers>span{
     color: #FFFFFF;
@@ -122,7 +124,7 @@ cursor: pointer;
     cursor: pointer;
 }
 .loginBtn{
-    width: 100%;
+    width: 75%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,11 +140,271 @@ cursor: pointer;
     bottom: 32px;
     font-size: 1.2vmax;
 }
-
-/*==== frame2 ==== */
+/*---frame2 ----*/
 .frame2{
     flex: 1;
     height: 100%;
     background: #D9D9D9;
     border-radius: 39px 0 0 39px;
+}
+
+
+/*======= Desktop====== */
+
+.desktopContainer{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 1024px;
+background: #1B1B1B;
+display: flex;
+flex-direction: row;
+overflow: auto;
+padding-top: 13px;
+padding-bottom: 13px;
+}
+/*--- sidebar--- */
+.sidebar{
+    width: 21.8%;
+}
+.sidebarItemContainer{
+    padding-top: 80px;
+    bottom: 357px;
+}
+.notioLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.notioLogo>img{
+    width: 9vmax;
+}
+
+
+.dashboard{
+    flex: 1;
+    height: 100%;
+    background: #EEEEEE;
+    border-radius: 39px 0 0 39px;
+    padding-left: 9px;
+    padding-bottom: 9px;
+    padding-top: 58px;
+}
+.dashboardHeaderTitle{
+    margin-left: 23px;
+}
+.dashboardHeaderTitle>span{
+font-weight: 600;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+line-height: 48px;
+font-size: 32px;
+color: #000000;
+}
+.dashboardHeaderTitle>p{
+    font-weight: 400;
+    font-size: 16px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 24px;
+    color: #2B3FF2;
+}
+.notioNotes{
+    position: absolute;
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    width:30vmax;
+    margin-left: 4px;
+}
+.notioNotes > div{
+    padding-top: 12px;
+    padding-left: 18px;
+    padding-right: 17px;
+width: 100%;
+height: 281px;
+background: #FFFFFF;
+border-radius: 22px;
+}
+
+.topNotes>span{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: 2vmax;
+    line-height: 36px;
+    color: #000000;
+}
+.flaggedNotes>span{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: 2vmax;
+    line-height: 36px;
+    color: #000000;
+}
+.topNotes>table{
+    margin-top: 8px;
+    width: 100%;
+    height: 72%;
+}
+.flaggedNotes>table{
+    margin-top: 8px;
+    width: 100%;
+    height: 72%;
+}
+th{
+/* text-align: center; */
+font-style: normal;
+font-weight: 500;
+font-size: 1.3vmax;
+line-height: 24px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+color: #000000;
+
+}
+tr{
+    margin-top: 12px;
+    margin-bottom: 12px;
+    justify-content: space-between;
+}
+td{
+    font-style: normal;
+    text-align: center;
+font-weight: 400;
+font-size: 1.2vmax;
+line-height: 24px;
+color: #8B8B8B;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+td:last-child{
+    color: #04C700!important;
+}
+.flaggedNotes td:last-child{
+    color: #C70018!important;
+}
+.viewAll{
+    width: 100%;
+    display: flex;
+   justify-content: flex-end;
+   align-items: center;
+    font-weight: 300;
+font-size: 12px;
+line-height: 18px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+color: #00B3FF;
+}
+
+.topContributorsContainer{
+    position: absolute;
+    padding:  11px 11px 14px 14px;
+    padding-right: 65px;
+    overflow: auto;
+    align-items: center;
+    margin-left: 5px;
+    bottom: 0px;
+    right: 19px;
+    left: 22.6%;
+    display: flex;
+    border-radius: 22px;
+    background: #FFFFFF;
+}
+.topContributorsContainer::-webkit-scrollbar{
+    display: none;
+}
+.topContributorsContainer{
+    -ms-overflow-style:none;
+    scrollbar-width: none;
+}
+
+.topContributorsHeading{
+   height: 100%;
+   width: 211px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-right: 43px;
+  
+}
+.topContributorsHeading>span{
+    font-size: 2.4vmax;
+line-height: 48px;
+font-weight: 650;
+/* Main Gradient */
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+background: linear-gradient(297.08deg, #000C66 0%, #050A30 99.26%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+  
+}
+.topContributorsHeading>p{
+    font-weight: 400;
+font-size: 1.3vmax;
+line-height: 30px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+color: #2B3FF2;
+}
+.contributorCardsContainer{
+flex: 1;
+/* width: 160.13px; */
+height: 208px;
+filter: drop-shadow(1.74059px 0px 17.4059px rgba(66, 133, 244, 0.2));
+display: flex;
+flex-direction: row;
+gap: 21px;
+justify-content: center;
+}
+.contributorCardsContainer >div{
+    width: 160.13px;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.contributorCardsContainer>div>span{
+    position: absolute;
+    background: #D9D9D9;
+    width: 54px;
+    height: 54px;
+    z-index: 1;
+    border-radius: 50%;
+}
+.contributorCard{
+    padding-left: 9px;
+    position: absolute;
+    bottom: 0;
+    width: 160.13px;
+    padding-top: 32px;
+    height: 70%;
+    /* height: 100%; */
+    background: white;
+border-radius: 17px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.contributorCard>table{
+    width: 100%;
+}
+.contributorCard>span{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.contributorCard td{
+    text-align: start;
+    font-weight: 500;
+font-size: 10.4435px;
+line-height: 16px;
+padding-bottom: 7px;
+/* Main */
+
+color: #050A30;
+}
+
+.cardSwipe{
+    position: absolute;
+    bottom: 60px;
+    right: 0px;
+    z-index:11;
 }
