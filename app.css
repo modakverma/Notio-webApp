@@ -130,6 +130,10 @@ background-clip: text;
     justify-content: center;
     padding-top: 20px;
 }
+.loginBtn>button>a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
 .loginBtn>button{
     border: none;
 }
@@ -171,8 +175,10 @@ padding-bottom: 13px;
 .sidebarItemContainer{
     padding-top: 80px;
     bottom: 357px;
+
 }
 .notioLogo{
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -180,6 +186,32 @@ padding-bottom: 13px;
 .notioLogo>img{
     width: 9vmax;
 }
+.sidebarItems{
+    padding-top: 78px;
+    padding-left: 4vmax;
+    font-size: 1.6vmax;
+    color: #FFFFFF;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 57.49px;
+}
+.sidebarItems a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.sidebarItems>div{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.sidebarItems img{
+    width: 2.1vmax;
+    height: 2.1vmax;
+}
+
+
 
 
 .dashboard{
@@ -193,6 +225,7 @@ padding-bottom: 13px;
 }
 .dashboardHeaderTitle{
     margin-left: 23px;
+    cursor: pointer;
 }
 .dashboardHeaderTitle>span{
 font-weight: 600;
@@ -251,6 +284,19 @@ border-radius: 22px;
     width: 100%;
     height: 72%;
 }
+.topNotes>table>thead>tr>th:nth-child(1) {
+   text-align: start;
+}
+.flaggedNotes>table>thead>tr>th:last-child {
+   text-align: end;
+}
+.flaggedNotes>table>tbody>tr>td:last-child {
+   text-align: end;
+   padding-right: 10px;
+}
+.topNotes>table>tbody>tr>td:nth-child(1) {
+   text-align: start;
+}
 th{
 /* text-align: center; */
 font-style: normal;
@@ -281,7 +327,14 @@ td:last-child{
 .flaggedNotes td:last-child{
     color: #C70018!important;
 }
+.flaggedNotes td{
+   text-align: start;
+}
+.flaggedNotes th{
+   text-align: start;
+}
 .viewAll{
+    cursor: pointer;
     width: 100%;
     display: flex;
    justify-content: flex-end;
@@ -317,12 +370,12 @@ color: #00B3FF;
 
 .topContributorsHeading{
    height: 100%;
-   width: 211px;
+   width: 16vmax;
    display: flex;
    flex-direction: column;
    justify-content: center;
    margin-right: 43px;
-  
+
 }
 .topContributorsHeading>span{
     font-size: 2.4vmax;
@@ -362,6 +415,7 @@ justify-content: center;
     justify-content: center;
 }
 .contributorCardsContainer>div>span{
+    cursor: pointer;
     position: absolute;
     background: #D9D9D9;
     width: 54px;
@@ -370,6 +424,7 @@ justify-content: center;
     border-radius: 50%;
 }
 .contributorCard{
+    cursor: pointer;
     padding-left: 9px;
     position: absolute;
     bottom: 0;
@@ -377,7 +432,7 @@ justify-content: center;
     padding-top: 32px;
     height: 70%;
     /* height: 100%; */
-    background: white;
+    background: #FFFFFF;
 border-radius: 17px;
 display: flex;
 flex-direction: column;
@@ -398,13 +453,89 @@ font-size: 10.4435px;
 line-height: 16px;
 padding-bottom: 7px;
 /* Main */
-
 color: #050A30;
 }
 
 .cardSwipe{
     position: absolute;
     bottom: 60px;
-    right: 0px;
+    right: -2px;
     z-index:11;
+    cursor: pointer;
+}
+
+/*====== notes ======*/
+.notesContainer{
+    position: absolute;
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    margin-left: 4px;
+    left: 22.7%;
+  right: 10px;
+  height: 83.8%;
+background: #FFFFFF;
+border-radius: 24px;
+padding-left: 34px;
+
+padding-top: 24px;
+padding-bottom: 24px;
+}
+.searchNotes{
+  margin-right: 15vmax;
+  height: 57px;
+  display: flex;
+  flex-direction: row;
+}
+.searchNotes>span{
+    position: absolute;
+    transform: translateX(1vmax);
+    padding-top: 11px;
+
+}
+.searchNotes>input{
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    background: #EEEEEE;
+    border: none;
+    font-size: 2.2vmax;
+    padding: 1vmax 4vmax 1vmax 6vmax;
+    color:#8B8B8B;
+}
+.notesContainer>table>thead>tr>th{
+    text-align: start;
+}
+.notesContainer>table>tbody>tr>td{
+    text-align: start;
+    font-weight: 300;
+font-size: 14px;
+}
+.notesContainer>table>tbody>tr>td:nth-child(3){
+    color: #04C700;
+}
+.notesContainer>table>tbody>tr>td:nth-child(4){
+    color: #D90000;
+}
+.notesContainer>table>tbody>tr>td:nth-child(5){
+    display: flex;
+    flex-direction: row;
+}
+.notesContainer>table>tbody>tr>td:nth-child(5)>span{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+   
+.notesContainer>table>tbody>tr>td:nth-child(6)>span{
+    background: #386BED;
+border-radius: 14px;
+padding: 3px 13px 3px 13px;
+font-size: 12px;
+font-weight: 300;
+    color: #FFFFFF;
 }
